@@ -49,4 +49,5 @@ jobs:
     - name: Set path & Run MetaCall Example
       run: |
         export LOADER_LIBRARY_PATH=/usr/local/lib
+        export LOADER_SCRIPT_PATH=/home/runner/work/C-in-Nodejs/C-in-Nodejs/
         sudo metacallcli index.js

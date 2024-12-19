@@ -1,3 +1,5 @@
-const { get } = require("./cfile.c");
+const { metacall, metacall_load_from_file } = require('metacall');
 
-console.log(get(5))
+metacall_load_from_file('c', ['cfile.c']);
+
+metacall('getval',5);

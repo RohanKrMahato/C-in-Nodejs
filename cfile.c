@@ -1,3 +1,3 @@
-int get(int a){
+int getval(int a){
     return a;
 }
