@@ -49,4 +49,4 @@ jobs:
     - name: Set path & Run MetaCall Example
       run: |
         export LOADER_LIBRARY_PATH=/usr/local/lib
-        sudo metacallcli /root/index.js
+        sudo metacallcli index.js
