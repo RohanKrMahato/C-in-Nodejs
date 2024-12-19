@@ -24,7 +24,7 @@ jobs:
           git \
           liburing-dev \
           cmake 
-          
+
     - name: Clone and Build MetaCall
       run: |
         git clone https://github.com/metacall/core
@@ -46,8 +46,14 @@ jobs:
         cd ../..
         sudo rm -rf core
 
+    - name: Verify MetaCall Installation
+      run: which metacallcli
+
+    - name: Check Node.js Version
+      run: node -v
+
     - name: Set path & Run MetaCall Example
       run: |
         export LOADER_LIBRARY_PATH="/usr/local/lib"
-        export LOADER_SCRIPT_PATH="`pwd`"
-        sudo metacallcli index.js
+        export LOADER_SCRIPT_PATH="/home/runner/work/C-in-Nodejs/C-in-Nodejs"
+        sudo metacallcli -v index.js
