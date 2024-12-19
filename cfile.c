@@ -1,4 +1,4 @@
-int getval(int a){
+int getval(int a, int b){
     // printf("%d",a);
-    return a;
+    return a+b;
 }
